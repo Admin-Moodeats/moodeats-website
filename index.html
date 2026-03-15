@@ -253,6 +253,22 @@ nav {
   animation: fadeUp 0.8s 0.55s both;
 }
 
+.hero-pills {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  animation: fadeUp 0.8s 0.65s both;
+  margin-top: 4px;
+}
+
+.hero-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.08);
+  color: var(--ink);
+  font-size: 12.5px; font-weight: 500;
+  padding: 7px 14px; border-radius: var(--r-pill);
+  letter-spacing: 0.01em;
+}
+
 .btn-hero-primary {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--ink); color: var(--white);
@@ -1086,21 +1102,9 @@ footer {
       </a>
     </div>
 
-    <div class="hero-stats">
-      <div>
-        <span class="stat-num">3</span>
-        <span class="stat-label">Verticals — Food, Market, Explore</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div>
-        <span class="stat-num">AI</span>
-        <span class="stat-label">Mood detection from text, voice & selfie</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div>
-        <span class="stat-num">🇨🇦</span>
-        <span class="stat-label">Built for Canada</span>
-      </div>
+    <div class="hero-pills">
+      <span class="hero-pill">🍽 Food · Market · Explore</span>
+      <span class="hero-pill">🎭 Mood · Voice · Selfie AI</span>
     </div>
   </div>
 
@@ -1475,7 +1479,7 @@ footer {
     <div class="section-eyebrow" style="color:var(--orange-soft);">For restaurants</div>
     <h2 class="section-title" style="color:var(--white);">Reach customers<br><em>in the moment.</em></h2>
     <p class="section-sub" style="color:rgba(255,255,255,0.55);margin:0 auto 40px;">MoodEats connects restaurants with customers at the exact moment they're looking for exactly what you serve. No paid placement — just smart matching.</p>
-    <a href="mailto:partners@moodeats.ca" class="btn-hero-primary" style="display:inline-flex;">
+    <a href="/cdn-cgi/l/email-protection#374756454359524544775a58585352564344195456" class="btn-hero-primary" style="display:inline-flex;">
       <span>🤝</span> Become a restaurant partner
     </a>
   </div>
@@ -1533,7 +1537,7 @@ footer {
         <li><a href="#">About</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#restaurant">Partner with us</a></li>
-        <li><a href="mailto:hello@moodeats.ca">Contact</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#e58d8089898aa5888a8a8180849196cb8684">Contact</a></li>
       </ul>
     </div>
     <div>
@@ -1555,7 +1559,7 @@ footer {
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -1586,14 +1590,4 @@ const barObserver = new IntersectionObserver((entries) => {
       entry.target.querySelectorAll('.intel-bar-fill').forEach(bar => {
         const w = bar.style.width;
         bar.style.width = '0%';
-        setTimeout(() => { bar.style.width = w; }, 200);
-      });
-    }
-  });
-}, { threshold: 0.3 });
-
-document.querySelectorAll('.intel-card-stack').forEach(el => barObserver.observe(el));
-</script>
-
-</body>
-</html>
+        setTimeout(() => { 

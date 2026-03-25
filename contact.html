@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | MoodEats Inc.</title>
+  <meta
+    name="description"
+    content="Contact MoodEats Inc. for general inquiries, support, privacy, and partnership requests."
+  />
+  <style>
+    :root {
+      --orange: #ff7a00;
+      --ink: #0b1220;
+      --ink-70: rgba(11, 18, 32, 0.7);
+      --cream: #f7f3ec;
+      --white: #ffffff;
+      --card: rgba(255,255,255,0.9);
+      --stroke: rgba(15,23,42,0.09);
+      --r-xl: 24px;
+      --r-pill: 999px;
+      --shadow: 0 12px 40px rgba(11,18,32,0.08), 0 0 0 1px rgba(15,23,42,0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 800;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .brand span { color: var(--orange); }
+
+    .nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--ink);
+      padding: 10px 16px;
+      border: 1px solid var(--stroke);
+      border-radius: var(--r-pill);
+      background: var(--white);
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 14px;
+    }
+
+    .sub {
+      max-width: 700px;
+      color: var(--ink-70);
+      margin-bottom: 36px;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: var(--r-xl);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .card p, .card li {
+      color: var(--ink-70);
+    }
+
+    .card ul {
+      padding-left: 18px;
+    }
+
+    a.email, a.phone, a.link {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 40px;
+      color: var(--ink-70);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="/index.html">Mood<span>Eats</span> Inc.</a>
+      <div class="nav">
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+
+    <h1>Contact MoodEats Inc.</h1>
+    <p class="sub">
+      MoodEats Inc. is a Canadian technology company in pre-launch production. For general inquiries, support, partnership opportunities, or privacy matters, contact us using the details below.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Business Details</h2>
+        <p><strong>Legal name:</strong> MoodEats Inc.</p>
+        <p><strong>Website:</strong> <a class="link" href="https://moodeats.ca">moodeats.ca</a></p>
+        <p><strong>Phone:</strong> <a class="phone" href="tel:+16475348990">647-534-8990</a></p>
+        <p><strong>Address:</strong> 12 Chopin Ct, Whitby, ON L1N 6C5, Canada</p>
+      </div>
+
+      <div class="card">
+        <h2>Email Contacts</h2>
+        <p><strong>General:</strong> <a class="email" href="mailto:admin@moodeats.ca">admin@moodeats.ca</a></p>
+        <p><strong>Support:</strong> <a class="email" href="mailto:support@moodeats.ca">support@moodeats.ca</a></p>
+        <p><strong>Partnerships:</strong> <a class="email" href="mailto:partners@moodeats.ca">partners@moodeats.ca</a></p>
+        <p><strong>Privacy:</strong> <a class="email" href="mailto:privacy@moodeats.ca">privacy@moodeats.ca</a></p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h2>Current Status</h2>
+      <p>
+        MoodEats is currently in production and pre-launch development. Public launch timing, platform availability, and distribution updates will be announced through official MoodEats channels.
+      </p>
+    </div>
+
+    <div class="footer">
+      © 2026 MoodEats Inc. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>

@@ -1612,6 +1612,205 @@
         padding: 0 24px;
       }
     }
+
+    /* ── Restaurant browse phone mockup ── */
+    .rb-phone-scene {
+      position: relative;
+      width: 300px;
+      height: 580px;
+    }
+    .rb-phone-outer {
+      width: 300px;
+      height: 580px;
+      background: #1a1a1a;
+      border-radius: 44px;
+      padding: 10px;
+      box-shadow:
+        0 0 0 1px #333,
+        0 30px 80px rgba(0,0,0,0.35),
+        0 10px 30px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 2;
+    }
+    .rb-phone-screen {
+      width: 100%;
+      height: 100%;
+      background: #f5f0eb;
+      border-radius: 36px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .rb-phone-notch {
+      width: 90px;
+      height: 26px;
+      background: #1a1a1a;
+      border-radius: 0 0 16px 16px;
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+    .rb-status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 16px 0;
+      font-size: 9px;
+      font-weight: 600;
+      color: #333;
+      flex-shrink: 0;
+    }
+    .rb-header {
+      padding: 8px 14px 6px;
+      flex-shrink: 0;
+    }
+    .rb-header-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #1a1a1a;
+      letter-spacing: -0.3px;
+    }
+    .rb-header-sub {
+      font-size: 10px;
+      color: #888;
+      margin-top: 1px;
+    }
+    .rb-filter-row {
+      display: flex;
+      gap: 6px;
+      padding: 0 14px 8px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .rb-filter-chip {
+      background: #fff;
+      border: 1px solid #e8e0d8;
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 9px;
+      font-weight: 600;
+      color: #555;
+      white-space: nowrap;
+    }
+    .rb-filter-chip.active {
+      background: #f97316;
+      border-color: #f97316;
+      color: #fff;
+    }
+    .rb-cards {
+      flex: 1;
+      padding: 0 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow: hidden;
+    }
+    .rb-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      flex-shrink: 0;
+    }
+    .rb-card-img {
+      height: 64px;
+      background: linear-gradient(135deg, var(--c1), var(--c2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      position: relative;
+    }
+    .rb-card-badge {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      font-size: 8px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+    .rb-card-body {
+      padding: 7px 10px 8px;
+    }
+    .rb-card-name {
+      font-size: 11px;
+      font-weight: 800;
+      color: #1a1a1a;
+      letter-spacing: -0.2px;
+    }
+    .rb-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 3px;
+    }
+    .rb-card-tag {
+      font-size: 9px;
+      color: #888;
+    }
+    .rb-card-dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+    .rb-card-rating {
+      font-size: 9px;
+      font-weight: 700;
+      color: #f97316;
+    }
+    .rb-card-dist {
+      font-size: 9px;
+      color: #aaa;
+      margin-left: auto;
+    }
+    .rb-open-pill {
+      display: inline-block;
+      background: #dcfce7;
+      color: #16a34a;
+      font-size: 8px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin-top: 3px;
+    }
+    .rb-float-card {
+      position: absolute;
+      background: #fff;
+      border-radius: 14px;
+      padding: 10px 14px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      z-index: 3;
+      min-width: 130px;
+    }
+    .rb-float-label {
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #aaa;
+    }
+    .rb-float-value {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-top: 2px;
+    }
+    .rb-float-sub {
+      font-size: 9px;
+      color: #888;
+      margin-top: 1px;
+    }
+    .rb-fc-left {
+      left: -110px;
+      top: 80px;
+    }
+    .rb-fc-bottom {
+      right: -110px;
+      bottom: 120px;
+    }
   </style>
 </head>
 <body>
@@ -1685,64 +1884,100 @@
     </div>
 
     <div class="hero-right">
-      <div class="phone-scene">
-        <div class="float-card fc-mood">
-          <div class="fc-emoji">😌</div>
-          <div class="fc-label">Mood detected</div>
-          <div class="fc-value">Relaxed</div>
-          <div class="fc-sub">Personalized recommendation flow</div>
+      <div class="rb-phone-scene">
+
+        <div class="rb-float-card rb-fc-left">
+          <div class="rb-float-label">Near you</div>
+          <div class="rb-float-value">6 open now</div>
+          <div class="rb-float-sub">Whitby · Ontario</div>
         </div>
 
-        <div class="float-card fc-weather">
-          <div class="fc-label">Ontario weather</div>
-          <div class="fc-value">Cold evening</div>
-          <div class="fc-sub">Comfort-food aware suggestions</div>
+        <div class="rb-float-card rb-fc-bottom">
+          <div class="rb-float-label">Est. delivery</div>
+          <div class="rb-float-value">25–35 min</div>
+          <div class="rb-float-sub">Based on your location</div>
         </div>
 
-        <div class="float-card fc-order">
-          <div class="fc-label">Suggested meal</div>
-          <div class="fc-value">Jollof Rice</div>
-          <div class="fc-sub">Matched to mood, time, and taste</div>
-        </div>
+        <div class="rb-phone-outer">
+          <div class="rb-phone-screen">
+            <div class="rb-phone-notch"></div>
+            <div class="rb-status-bar">
+              <span>9:41</span>
+              <span>●●●</span>
+            </div>
 
-        <div class="phone-outer">
-          <div class="phone-screen">
-            <div class="phone-notch"></div>
-            <div class="phone-ui">
-              <div class="phone-blob pb1"></div>
-              <div class="phone-blob pb2"></div>
+            <div class="rb-header">
+              <div class="rb-header-title">Restaurants near you</div>
+              <div class="rb-header-sub">Whitby, Ontario · Open now</div>
+            </div>
 
-              <div class="phone-tabs">
-                <div class="phone-tab active">Food</div>
-                <div class="phone-tab">Market</div>
-                <div class="phone-tab">Explore</div>
+            <div class="rb-filter-row">
+              <span class="rb-filter-chip active">All</span>
+              <span class="rb-filter-chip">Nigerian</span>
+              <span class="rb-filter-chip">Asian</span>
+              <span class="rb-filter-chip">Pizza</span>
+            </div>
+
+            <div class="rb-cards">
+
+              <div class="rb-card">
+                <div class="rb-card-img" style="--c1:#f97316;--c2:#fb923c;">
+                  🍛
+                  <div class="rb-card-badge">⭐ 4.8</div>
+                </div>
+                <div class="rb-card-body">
+                  <div class="rb-card-name">Jollof Republic</div>
+                  <div class="rb-card-meta">
+                    <span class="rb-card-tag">Nigerian</span>
+                    <div class="rb-card-dot"></div>
+                    <span class="rb-card-rating">4.8</span>
+                    <span class="rb-card-dist">2.8 km</span>
+                  </div>
+                  <span class="rb-open-pill">🟢 Open now</span>
+                </div>
               </div>
 
-              <div class="phone-bubble">
-                Long day? Tell us what you're in the mood for and get food or groceries sorted in seconds.
+              <div class="rb-card">
+                <div class="rb-card-img" style="--c1:#7c3aed;--c2:#a78bfa;">
+                  🍜
+                  <div class="rb-card-badge">⭐ 4.6</div>
+                </div>
+                <div class="rb-card-body">
+                  <div class="rb-card-name">Sakura Ramen House</div>
+                  <div class="rb-card-meta">
+                    <span class="rb-card-tag">Japanese</span>
+                    <div class="rb-card-dot"></div>
+                    <span class="rb-card-rating">4.6</span>
+                    <span class="rb-card-dist">1.4 km</span>
+                  </div>
+                  <span class="rb-open-pill">🟢 Open now</span>
+                </div>
               </div>
 
-              <div class="phone-bubble phone-bubble-user">
-                I want something comforting for tonight.
+              <div class="rb-card">
+                <div class="rb-card-img" style="--c1:#0ea5e9;--c2:#38bdf8;">
+                  🍕
+                  <div class="rb-card-badge">⭐ 4.4</div>
+                </div>
+                <div class="rb-card-body">
+                  <div class="rb-card-name">Crust & Co.</div>
+                  <div class="rb-card-meta">
+                    <span class="rb-card-tag">Pizza · Italian</span>
+                    <div class="rb-card-dot"></div>
+                    <span class="rb-card-rating">4.4</span>
+                    <span class="rb-card-dist">3.1 km</span>
+                  </div>
+                  <span class="rb-open-pill">🟢 Open now</span>
+                </div>
               </div>
 
-              <div class="phone-typing">
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-              </div>
-
-              <div class="phone-chips">
-                <span class="phone-chip orange">🍛 Comfort options</span>
-                <span class="phone-chip">Jollof Rice</span>
-                <span class="phone-chip">Pepper Soup</span>
-                <span class="phone-chip orange">🥤 Drink pairing</span>
-              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
+
   </section>
 
   <div class="ticker-wrap" aria-label="Product highlights">
